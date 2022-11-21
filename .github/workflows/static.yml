@@ -19,8 +19,7 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - name: Get Current Contribution Chart
-        uses: Benbentwo/githubchart@0.1.0
+      - name: Create GitHub user contribution chart
+        uses: alexrogalskiy/github-action-user-contribution@master
         with:
-          username: januarharianto
-          file-output: assets/contribution.svg
+          userName: januarharianto
