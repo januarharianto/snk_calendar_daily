@@ -1,0 +1,26 @@
+name: generate animation
+
+on:
+  # run automatically every 12 hours
+  schedule:
+    - cron: "0 */12 * * *"
+
+  # allows to manually run the job at any time
+  workflow_dispatch:
+
+  # run on every push on the master branch
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Get Current Contribution Chart
+        uses: Benbentwo/githubchart@0.1.0
+        with:
+          username: januarharianto
+          file-output: assets/contribution.svg
