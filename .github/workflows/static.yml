@@ -14,12 +14,7 @@ on:
       - main
 
 jobs:
-  generate:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-
-    steps:
-      - name: Create GitHub user contribution chart
-        uses: alexrogalskiy/github-action-user-contribution@master
-        with:
-          userName: januarharianto
+  - name: Create GitHub user contribution chart
+    uses: alexrogalskiy/github-action-user-contribution@master
+    with:
+      userName: januarharianto
