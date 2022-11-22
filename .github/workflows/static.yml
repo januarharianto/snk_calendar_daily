@@ -1,14 +1,12 @@
-name: generate animation
-
 on:
   # run automatically every 12 hours
   schedule:
     - cron: "0 */12 * * *"
 
-jobs:
-  - name: Create GitHub user contribution chart
-    uses: alexrogalskiy/github-action-user-contribution@master
-    with:
-      userName: "januarharianto"
-      fileName: "chart.svg"
-      filePath: "images"
+  jobs:
+    - name: Create GitHub user contribution chart
+      uses: alexrogalskiy/github-action-user-contribution@master
+      with:
+        userName: "januarharianto"
+        fileName: "chart.svg"
+        filePath: "images"
