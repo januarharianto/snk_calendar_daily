@@ -5,16 +5,10 @@ on:
   schedule:
     - cron: "0 */12 * * *"
 
-  # allows to manually run the job at any time
-  workflow_dispatch:
-
-  # run on every push on the master branch
-  push:
-    branches:
-      - main
-
 jobs:
   - name: Create GitHub user contribution chart
     uses: alexrogalskiy/github-action-user-contribution@master
     with:
-      userName: januarharianto
+      userName: "januarharianto"
+      fileName: "chart.svg"
+      filePath: "images"
